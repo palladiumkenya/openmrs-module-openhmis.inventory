@@ -227,6 +227,9 @@
 			<column name="retire_reason" type="varchar(255)"/>
 			<column name="uuid" type="char(38)"><constraints nullable="false" unique="true" /></column>
 		</createTable>
+		<sql>
+			ALTER TABLE inv_stock_operation_type CONVERT TO CHARACTER SET utf8
+		</sql>
 		<createTable tableName="inv_stock_operation_attribute_type">
 			<column name="stock_operation_attribute_type_id" autoIncrement="true" type="int">
 				<constraints nullable="false" primaryKey="true"/>
