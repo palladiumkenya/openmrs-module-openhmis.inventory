@@ -1,31 +1,23 @@
 <%
-    ui.decorateWith("appui", "standardEmrPage")
-
-	def htmlSafeId = { extension ->
-		"${ extension.id.replace(".", "-") }-${ extension.id.replace(".", "-") }-extension"
-	}
+    ui.decorateWith("kenyaemr", "standardPage")
 %>
-
-<script type="text/javascript">
-    var breadcrumbs = [
-        { icon: "icon-home", link: '/' + OPENMRS_CONTEXT_PATH + '/index.htm' },
-        { label: "${ ui.message("openhmis.inventory.page") }"}
-    ];
-</script>
-
-<div id="home-container">
+<div class="ke-page-content">
 
 	<h1>${ui.message("openhmis.inventory.task.page")}</h1>
 
     <div id="apps">
-        <% extensions.each { ext -> %>
-            <a id="${ htmlSafeId(ext) }" href="/${ contextPath }/${ ext.url }" class="button app big">
-                <% if (ext.icon) { %>
-                   <i class="${ ext.icon }"></i>
-                <% } %>
-                ${ ui.message(ext.label) }
-            </a>
+        <% extensions.each { ext ->
+
+        def onClick = "ui.navigate('/" + contextPath + "/" + ext.url + "')"
+
+        %>
+
+        <div style="float: left; margin: 5px;" >
+            <button type="button" class="ke-app" onclick="${ onClick }"><img src="" />${ ui.message(ext.label) }</button>
+        </div>
+
         <% } %>
+
     </div>
 
 </div>
