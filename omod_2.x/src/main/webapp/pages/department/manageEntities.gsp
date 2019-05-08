@@ -2,6 +2,32 @@
 
 </script>
 
+<div style="margin-left: 5px; margin-right: 5px">
+	<br/>
+	<ul id="breadcrumbs">
+		<li>
+			<a href="${ui.pageLink("kenyaemr", "userHome")}">
+				<i class="fa fa-home"></i>
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventoryLanding")}">
+				${ ui.message("openhmis.inventory.page")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventory/manageModule")}">
+				${ ui.message("openhmis.inventory.manage.module")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			${ ui.message("openhmis.inventory.admin.departments")}
+		</li>
+	</ul>
+</div>
 <div id="entities-body">
 	<br/>
 
