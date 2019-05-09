@@ -36,5 +36,7 @@
 		</li>
 	</ul>
 </div>
+<div style="margin:0 50px">
 
 ${ui.includeFragment("openhmis.inventory", "stockOperations/entity")}
+</div>

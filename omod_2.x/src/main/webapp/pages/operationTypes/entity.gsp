@@ -136,4 +136,6 @@
 		</p>
 	</fieldset>
 </form>
+<div style="margin:0 50px">
 ${ui.includeFragment("openhmis.commons", "retireUnretireDeleteFragment", [showDeleteSection: "false"])}
+</div>

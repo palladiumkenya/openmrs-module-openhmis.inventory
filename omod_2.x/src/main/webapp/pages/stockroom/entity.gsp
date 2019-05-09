@@ -293,4 +293,7 @@
 		</form>
 	</span>
 </div>
-${ui.includeFragment("openhmis.commons", "retireUnretireDeleteFragment")}
+<div style="margin:0 50px">
+	${ui.includeFragment("openhmis.commons", "retireUnretireDeleteFragment")}
+
+</div>

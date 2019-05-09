@@ -79,4 +79,6 @@
         </span>
     </fieldset>
 </form>
+<div style="margin:0 50px">
 ${ ui.includeFragment("openhmis.commons", "retireUnretireDeleteFragment") }
+</div>
