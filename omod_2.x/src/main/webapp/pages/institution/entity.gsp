@@ -2,6 +2,38 @@
 
 
 </script>
+<div style="margin:0 50px">
+	<br/>
+	<ul id="breadcrumbs">
+		<li>
+			<a href="${ui.pageLink("kenyaemr", "userHome")}">
+				<i class="fa fa-home"></i>
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventoryLanding")}">
+				${ ui.message("openhmis.inventory.page")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventory/manageModule")}">
+				${ ui.message("openhmis.inventory.manage.module")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "institution/entities")}">
+			${ ui.message("openhmis.inventory.admin.institutions")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			${ ui.message("openhmis.inventory.institution.name")}
+		</li>
+	</ul>
+</div>
 
 <div ng-show="loading" class="loading-msg">
 	<span>${ui.message("openhmis.commons.general.processingPage")}</span>
@@ -12,7 +44,10 @@
 </div>
 
 <form ng-hide="loading" name="entityForm" class="entity-form" ng-class="{'submitted': submitted}" style="font-size:inherit">
-	${ ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
+	<div style="margin:0 50px">
+		${ ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
+	</div>
+
 	
 	<input type="hidden" ng-model="entity.uuid"/>
 
@@ -41,7 +76,7 @@
 	<fieldset class="format">
 		<span>
 			<input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="cancel()" />
-			<input type="button" class="confirm right" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
+			<input type="button" class="confirm left" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
 		</span>
 	</fieldset>
 </form>

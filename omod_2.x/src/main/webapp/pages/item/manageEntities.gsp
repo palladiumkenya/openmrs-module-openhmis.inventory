@@ -5,7 +5,7 @@
 <script type="text/javascript">
 
 </script>
-<div style="margin-left: 5px; margin-right: 5px">
+<div style="margin:0 50px; ">
 <br/>
 <ul id="breadcrumbs">
 	<li>
@@ -31,7 +31,7 @@
 	</li>
 </ul>
 </div>
-<div style="margin-left: 5px; margin-right: 5px" id="entities-body">
+<div style="margin: 0 50px" id="entities-body">
 	<br/>
 
 	<div id="manage-entities-header">

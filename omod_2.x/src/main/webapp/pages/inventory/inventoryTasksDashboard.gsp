@@ -7,7 +7,7 @@
 	ui.includeCss("kenyaemr", "referenceapplication.css")
 %>
 
-<div style="margin-left: 5px; margin-right: 5px">
+<div style="margin:0 50px">
 	<br/>
 	<ul id="breadcrumbs">
 		<li>
@@ -27,7 +27,7 @@
 		</li>
 	</ul>
 </div>
-<div class="ke-page-content">
+<div  style="margin:0 50px" class="ke-page-content">
 
 	<h1>${ui.message("openhmis.inventory.admin.task.dashboard")}</h1>
 

@@ -7,6 +7,38 @@
 
 
 </script>
+<div style="margin:0 50px; ">
+    <br/>
+    <ul id="breadcrumbs">
+        <li>
+            <a href="${ui.pageLink("kenyaemr", "userHome")}">
+                <i class="fa fa-home"></i>
+            </a>
+        </li>
+        <li>
+            <i class="glyphicon glyphicon-menu-right link"></i>
+            <a href="${ui.pageLink("openhmis.inventory", "inventoryLanding")}">
+                ${ ui.message("openhmis.inventory.page")}
+            </a>
+        </li>
+        <li>
+            <i class="glyphicon glyphicon-menu-right link"></i>
+            <a href="${ui.pageLink("openhmis.inventory", "inventory/manageModule")}">
+                ${ ui.message("openhmis.inventory.manage.module")}
+            </a>
+        </li>
+        <li>
+            <i class="glyphicon glyphicon-menu-right link"></i>
+            <a href="${ui.pageLink("openhmis.inventory", "item/entities")}">
+            ${ ui.message("openhmis.inventory.admin.items")}
+            </a>
+        </li>
+        <li>
+            <i class="glyphicon glyphicon-menu-right link"></i>
+            ${ ui.message("openhmis.inventory.item.name")}
+        </li>
+    </ul>
+</div>
 
 <div ng-show="loading" class="loading-msg">
     <span>${ui.message("openhmis.commons.general.processingPage")}</span>
@@ -17,7 +49,11 @@
 </div>
 
 <form ng-hide="loading" name="itemForm" class="entity-form" ng-class="{'submitted': submitted}" style="font-size:inherit">
-    ${ ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
+
+    <div style="margin:0 50px;">
+        ${ ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
+    </div>
+
 
     <input type="hidden" ng-model="entity.uuid" />
 
@@ -187,7 +223,7 @@
     <fieldset class="format">
         <span>
             <input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="cancel()" />
-            <input type="button" class="confirm right" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
+            <input type="button" class="confirm left" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
         </span>
     </fieldset>
     <div id="item-price-dialog" class="dialog" style="display:none;">
@@ -214,8 +250,9 @@
             <br />
             <div class="ngdialog-buttons detail-section-border-top">
                 <br />
-                <input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="closeThisDialog('Cancel')" />
-                <input type="button" class="confirm right" value="Confirm" ng-disabled="itemPrice.price == undefined"  ng-click="confirm('OK')" />
+                <input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="closeThisDialog('Cancel')" />&nbsp;&nbsp;
+
+                <input type="button" class="confirm left" value="Confirm" ng-disabled="itemPrice.price == undefined"  ng-click="confirm('OK')" />
             </div>
         </div>
     </div>
@@ -241,7 +278,7 @@
             <div class="ngdialog-buttons detail-section-border-top">
                 <br />
                 <input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="closeThisDialog('Cancel')" />
-                <input type="button" class="confirm right" value="Confirm"  ng-disabled="itemCode.code == undefined" ng-click="confirm('OK')" />
+                <input type="button" class="confirm left" value="Confirm"  ng-disabled="itemCode.code == undefined" ng-click="confirm('OK')" />
             </div>
         </div>
     </div>

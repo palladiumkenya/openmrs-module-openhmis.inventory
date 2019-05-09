@@ -128,7 +128,7 @@
 				<input type="button" class="cancel left" value="{{messageLabels['general.cancel']}}" ng-click="cancel()"/>
 			</span>
 			<span>
-				<input type="button" class="confirm right"
+				<input type="button" class="confirm left"
 				       value="{{messageLabels['general.save']}}"
 				       ng-disabled="entity.name == '' || entity.name == undefined"
 				       ng-click="saveOrUpdate()"/>

@@ -4,6 +4,38 @@
 	jQuery(".tabs").tabs();
 
 </script>
+<div style="margin:0 50px">
+	<br/>
+	<ul id="breadcrumbs">
+		<li>
+			<a href="${ui.pageLink("kenyaemr", "userHome")}">
+				<i class="fa fa-home"></i>
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventoryLanding")}">
+				${ ui.message("openhmis.inventory.page")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "inventory/manageModule")}">
+				${ ui.message("openhmis.inventory.manage.module")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			<a href="${ui.pageLink("openhmis.inventory", "stockroom/entities")}">
+			${ ui.message("openhmis.inventory.admin.stockrooms")}
+			</a>
+		</li>
+		<li>
+			<i class="glyphicon glyphicon-menu-right link"></i>
+			${ ui.message("openhmis.inventory.stockroom.name")}
+		</li>
+	</ul>
+</div>
 <div ng-show="loading" class="loading-msg">
 	<span>${ui.message("openhmis.commons.general.processingPage")}</span>
 	<br />
@@ -14,7 +46,9 @@
 
 <div ng-hide="loading">
 	<form name="entityForm" class="entity-form" ng-class="{'submitted': submitted}" style="font-size:inherit">
+		<div style="margin:0 50px">
 		${ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
+		</div>
 
 		<input type="hidden" ng-model="entity.uuid" />
 		<fieldset class="format">
@@ -43,7 +77,7 @@
 		<fieldset class="format" ng-hide="entity.uuid !== ''">
 			<span>
 				<input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="cancel()" />
-				<input type="button" class="confirm right" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
+				<input type="button" class="confirm left" value="{{messageLabels['general.save']}}" ng-click="saveOrUpdate()" />
 			</span>
 		</fieldset>
 	</form>
@@ -251,7 +285,7 @@
 				<p>
 					<span><input type="button" class="cancel" value="{{messageLabels['general.cancel']}}" ng-click="cancel()"/>
 					</span>
-					<span><input type="button" class="confirm right" value="{{messageLabels['general.save']}}"
+					<span><input type="button" class="confirm left" value="{{messageLabels['general.save']}}"
 								 ng-click="saveOrUpdate()"/></span>
 				</p>
 			</div>

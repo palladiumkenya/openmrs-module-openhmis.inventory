@@ -16,7 +16,7 @@
         }
     ];
 </script>
-<div style="margin-left: 5px; margin-right: 5px">
+<div style="margin:0 50px">
 	<br/>
 	<ul id="breadcrumbs">
 		<li>
@@ -50,7 +50,7 @@
 	</span>
 </div>
 
-<div ng-hide="loading">
+<div ng-hide="loading" style="margin:0 50px">
 	<div style="font-size:inherit">
 		<table class="header-title">
 			<span class="h1-substitue-left" style="float:left;">
