@@ -44,7 +44,7 @@
 	</span>
 </div>
 
-<div ng-hide="loading">
+<div ng-hide="loading" style="margin:0 50px">
 	<form name="entityForm" class="entity-form" ng-class="{'submitted': submitted}" style="font-size:inherit">
 		<div style="margin:0 50px">
 		${ui.includeFragment("openhmis.commons", "editEntityHeaderFragment")}
