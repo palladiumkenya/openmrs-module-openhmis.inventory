@@ -31,7 +31,7 @@
 
 </script>
 
-<div style="margin-left: 5px; margin-right: 5px">
+<div style="margin:0 50px">
     <br/>
     <ul id="breadcrumbs">
         <li>
@@ -66,7 +66,7 @@
     </span>
 </div>
 
-<div ng-hide="loading">
+<div ng-hide="loading" style="margin:0 50px">
     <h1>${ui.message('openhmis.inventory.admin.create')}</h1>
     <form name="entityForm" class="entity-form create-operation-content" ng-class="{'submitted': submitted}">
         <fieldset class="content createOperation">
@@ -306,7 +306,7 @@
         <div>
             <input type="button" class="cancel" value="${ui.message('general.cancel')}"
                        ng-click="cancel()" />
-            <input type="button" class="confirm right" value="${ui.message('general.save')}"
+            <input type="button" class="confirm left" value="${ui.message('general.save')}"
                        ng-click="saveOrUpdate()" />
         </div>
         <div id="change-operation-date-dialog" class="dialog hide-dialog">

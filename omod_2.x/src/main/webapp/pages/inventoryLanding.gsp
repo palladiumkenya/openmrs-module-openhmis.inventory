@@ -6,7 +6,7 @@
     }
     ui.includeCss("kenyaemr", "referenceapplication.css")
 %>
-<div class="ke-page-content">
+<div style="margin:0 50px" class="ke-page-content">
 
 	<h1>${ui.message("openhmis.inventory.task.page")}</h1>
 
