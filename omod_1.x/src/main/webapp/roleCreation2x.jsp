@@ -52,7 +52,7 @@
 	<br />
 </spring:hasBindErrors>
 
-<div id="body-wrapper">
+<div id="body-wrapper" style="margin:0 50px">
 <h2>
 	<spring:message code="openhmis.inventory.admin.role" />
 </h2>

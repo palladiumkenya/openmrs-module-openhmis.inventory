@@ -28,7 +28,7 @@
 	}
 </script>
 
-<div id="body-wrapper">
+<div id="body-wrapper" style="margin:0 50px">
 	<h2>
 		<spring:message code="openhmis.inventory.admin.settings"/>
 	</h2>
