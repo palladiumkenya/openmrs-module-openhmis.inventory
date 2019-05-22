@@ -29,7 +29,6 @@
 
 <div  style="margin:0 50px" class="ke-page-content">
 
-    <h1>${ui.message("openhmis.inventory.title")}</h1>
 
     <div id="apps">
         <% extensions.each { ext -> %>
